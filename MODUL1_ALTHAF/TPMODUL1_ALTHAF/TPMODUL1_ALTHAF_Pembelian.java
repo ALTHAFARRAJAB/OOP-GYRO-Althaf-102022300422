@@ -3,13 +3,13 @@
     
     public class TPMODUL1_ALTHAF_Pembelian {
         public static void main(String[] args) {
-            // ArrayList to store available flights
+            //ArrayList untuk menyimpan penerbangan yang tersedia
             ArrayList<TPMODUL1_ALTHAF_Penerbangan> daftarPenerbangan = new ArrayList<>();
-            // Add some flight data
+            // Tambahkan beberapa data penerbangan
             daftarPenerbangan.add(new TPMODUL1_ALTHAF_Penerbangan("GA101", "CGK, Jakarta", "DPS, Bali", "06:30", "08:15", 1200000));
             daftarPenerbangan.add(new TPMODUL1_ALTHAF_Penerbangan("QZ202", "SUB, Surabaya", "KNO, Medan", "09:00", "11:45", 1350000));
     
-            // Scanner to capture user input
+            // Pemindai untuk menangkap masukan pengguna
             Scanner scanner = new Scanner(System.in);
             TPMODUL1_ALTHAF_Penumpang penumpang = null;
             TPMODUL1_ALTHAF_Penerbangan penerbangan = null;
@@ -25,14 +25,14 @@
     
                 switch (choice) {
                     case 1:
-                        // Display list of flights
+                        // Tampilkan daftar penerbangan
                         System.out.println("\nDaftar Penerbangan:");
                         for (int i = 0; i < daftarPenerbangan.size(); i++) {
                             daftarPenerbangan.get(i).tampilDaftarPenerbangan(i + 1);
                         }
                         break;
                     case 2:
-                        // Buy ticket
+                        // Beli tiket
                         System.out.println("\nSilakan isi data diri Anda terlebih dahulu!");
                         System.out.print("Masukkan NIK: ");
                         String NIK = scanner.next();
@@ -56,7 +56,7 @@
                         break;
                     case 3:
                         if (penumpang != null && penerbangan != null) {
-                            // Display booked ticket details
+                            //Tampilkan detail tiket yang dipesan
                             System.out.println("\n====== Detail Tiket Penerbangan ======");
                             penumpang.tampilDaftarPenumpang();
                             penerbangan.tampilDaftarPenerbangan(1);
